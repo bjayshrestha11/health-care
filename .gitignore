@@ -13,7 +13,11 @@ dist-ssr
 *.local
 
 # TanStack Router
-src/routeTree.gen.ts
+**/routeTree.gen.ts
+**/.tanstack
+
+# pnpm
+.pnpm-store
 
 # Editor directories and files
 .vscode/*

@@ -2,8 +2,11 @@
 
 Redesign of [aplusunitedhc.com](https://www.aplusunitedhc.com/), a healthcare website.
 
+pnpm workspace containing a public-facing site today, with room to add an admin app later.
+
 ## Tech stack
 
+- [pnpm](https://pnpm.io/) workspaces — monorepo package management
 - [Vite](https://vite.dev/) — build tool & dev server
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [TanStack Router](https://tanstack.com/router) — file-based routing (`src/routes`)
@@ -14,34 +17,44 @@ Redesign of [aplusunitedhc.com](https://www.aplusunitedhc.com/), a healthcare we
 ## Getting started
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev       # or: make dev
 ```
 
 ## Scripts
 
-- `npm run dev` — start the dev server
-- `npm run build` — type-check and build for production
-- `npm run preview` — preview the production build
-- `npm run lint` — run oxlint
+Run from the repo root (delegate to `apps/user` via `pnpm --filter`):
+
+- `pnpm dev` / `make dev` — start the dev server
+- `pnpm build` / `make build` — type-check and build for production
+- `pnpm preview` / `make preview` — preview the production build
+- `pnpm lint` / `make lint` — run oxlint across all workspace packages
 
 ## Adding shadcn components
 
 ```bash
-npx shadcn@latest add <component>
+cd apps/user
+pnpm dlx shadcn@latest add <component>
 ```
 
-## Project structure
+## Workspace structure
 
 ```
-src/
-  components/
-    ui/          # shadcn components
-  lib/
-    utils.ts     # cn() helper, etc.
-  routes/
-    __root.tsx   # root layout, providers, devtools
-    index.tsx    # "/" route
-  main.tsx       # router + query client setup
-  index.css      # Tailwind + shadcn theme tokens
+apps/
+  user/            # public-facing site
+    src/
+      components/
+        ui/          # shadcn components
+      lib/
+        utils.ts     # cn() helper, etc.
+      routes/
+        __root.tsx   # root layout, providers, devtools
+        index.tsx    # "/" route
+      main.tsx       # router + query client setup
+      index.css      # Tailwind + shadcn theme tokens
+packages/          # shared code across apps (empty for now)
+pnpm-workspace.yaml
 ```
+
+When the admin site is added, it will live alongside `user` as `apps/admin`, sharing
+common UI/config via `packages/`.

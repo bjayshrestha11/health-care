@@ -1,19 +1,19 @@
 .PHONY: dev build preview lint install clean
 
 install:
-	npm install
+	pnpm install
 
 dev:
-	npm run dev
+	pnpm --filter user dev
 
 build:
-	npm run build
+	pnpm --filter user build
 
 preview:
-	npm run preview
+	pnpm --filter user preview
 
 lint:
-	npm run lint
+	pnpm -r lint
 
 clean:
-	rm -rf dist node_modules/.tmp
+	rm -rf apps/user/dist apps/user/node_modules/.tmp
