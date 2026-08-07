@@ -1,5 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Button } from '@health-care/ui/components/button'
+import { HeroSection } from '@/components/home/hero-section'
+import { FeatureHighlights } from '@/components/home/feature-highlights'
+import { CompanyOverview } from '@/components/home/company-overview'
+import { MissionVision } from '@/components/home/mission-vision'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -7,10 +10,11 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <main className="flex min-h-svh flex-col items-center justify-center gap-4">
-      <h1 className="text-3xl font-semibold">A+ United Healthcare</h1>
-      <p className="text-muted-foreground">Project scaffold is ready.</p>
-      <Button>Get started</Button>
-    </main>
+    <>
+      <HeroSection />
+      <FeatureHighlights />
+      <CompanyOverview />
+      <MissionVision />
+    </>
   )
 }

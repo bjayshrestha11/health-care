@@ -1,0 +1,51 @@
+import { images } from "@/content/images"
+
+export const hero = {
+  eyebrow: "Home Care Aides Serving Pennsylvania",
+  heading: "Compassionate home care you can count on",
+  body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on APlus United Home Care.",
+  primaryCta: { label: "Contact Us", href: "/contact" },
+  secondaryCta: { label: "Our Services", href: "/services" },
+  image: images.homeHero,
+} as const
+
+export const featureHighlights = [
+  {
+    icon: "Clock",
+    title: "When You Need Us",
+    body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on APlus United Home Care.",
+    cta: { label: "Learn More", href: "/services" },
+  },
+  {
+    icon: "HeartHandshake",
+    title: "Medicaid Pays 100%",
+    body: "Medicaid and Medicaid HMOs pay 100% when people qualify for in-home help. Let's see if you qualify.",
+    cta: { label: "Contact Us", href: "/contact" },
+  },
+  {
+    icon: "Users",
+    title: "We'll Hire Your Family",
+    body: "Through our Family to Family Program, Medicaid recipients can hire family members or close friends to provide their in-home care, with Medicaid covering the cost.",
+    cta: { label: "Learn More", href: "/services" },
+  },
+] as const
+
+export const companyOverview = {
+  heading: "About APlus United Home Care, LLC",
+  paragraphs: [
+    "APlus United Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Pennsylvania.",
+    "We proudly serve clients from three locations across the state, sending qualified, directly-employed aides into clients' homes to help them live safely and independently.",
+  ],
+  image: images.aboutHero,
+} as const
+
+export const mission = {
+  heading: "Our Mission",
+  body: "The Agency's mission is to provide paraprofessional service to the consumer in their place of residence, thereby assisting them to realize his or her highest level of independence and quality of life.",
+  points: ["Quality Care", "Personal Service", "Dependable Caregivers"],
+} as const
+
+export const vision = {
+  heading: "Our Vision",
+  body: "We strive to be one of the leading providers of a wide range of quality home care and services, recognized for enduring dedication to provide innovative, professional, and compassionate care.",
+} as const
