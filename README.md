@@ -3,6 +3,7 @@
 Redesign of [aplusunitedhc.com](https://www.aplusunitedhc.com/), a healthcare website.
 
 pnpm workspace containing a public-facing site today, with room to add an admin app later.
+Both will share UI components via `packages/ui`.
 
 ## Tech stack
 
@@ -12,7 +13,7 @@ pnpm workspace containing a public-facing site today, with room to add an admin 
 - [TanStack Router](https://tanstack.com/router) — file-based routing (`src/routes`)
 - [TanStack Query](https://tanstack.com/query) — data fetching & caching
 - [Tailwind CSS v4](https://tailwindcss.com/)
-- [shadcn/ui](https://ui.shadcn.com/) — component primitives (`src/components/ui`)
+- [shadcn/ui](https://ui.shadcn.com/) — component primitives (`packages/ui`)
 
 ## Getting started
 
@@ -32,29 +33,40 @@ Run from the repo root (delegate to `apps/user` via `pnpm --filter`):
 
 ## Adding shadcn components
 
+Add new components directly to the shared package:
+
 ```bash
-cd apps/user
+cd packages/ui
 pnpm dlx shadcn@latest add <component>
+```
+
+Then import them in any app via the package name:
+
+```ts
+import { Button } from '@health-care/ui/components/button'
 ```
 
 ## Workspace structure
 
 ```
 apps/
-  user/            # public-facing site
+  user/                    # public-facing site
     src/
-      components/
-        ui/          # shadcn components
-      lib/
-        utils.ts     # cn() helper, etc.
       routes/
-        __root.tsx   # root layout, providers, devtools
-        index.tsx    # "/" route
-      main.tsx       # router + query client setup
-      index.css      # Tailwind + shadcn theme tokens
-packages/          # shared code across apps (empty for now)
+        __root.tsx         # root layout, providers, devtools
+        index.tsx          # "/" route
+      main.tsx             # router + query client setup
+      index.css            # imports @health-care/ui/globals.css
+packages/
+  ui/                      # shared shadcn/ui components
+    src/
+      components/          # e.g. button.tsx
+      lib/
+        utils.ts           # cn() helper
+      styles/
+        globals.css        # Tailwind + shadcn theme tokens
 pnpm-workspace.yaml
 ```
 
-When the admin site is added, it will live alongside `user` as `apps/admin`, sharing
-common UI/config via `packages/`.
+When the admin site is added, it will live alongside `user` as `apps/admin` and
+depend on `@health-care/ui` the same way `user` does.
