@@ -9,8 +9,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold">
-          <span className="text-primary">APlus</span>
-          <span className="hidden sm:inline">United Home Care</span>
+          <span className="text-primary">Altimax</span>
+          <span className="hidden sm:inline">Home Care</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
