@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HeroSection } from '@/components/home/hero-section'
-import { FeatureHighlights } from '@/components/home/feature-highlights'
+import { ServicesSection } from '@/components/home/services-section'
 import { AboutSection } from '@/components/home/about-section'
 import { MissionVision } from '@/components/home/mission-vision'
 
@@ -13,7 +13,7 @@ function HomePage() {
     <>
       <HeroSection />
       <AboutSection />
-      <FeatureHighlights />
+      <ServicesSection />
       <MissionVision />
     </>
   )

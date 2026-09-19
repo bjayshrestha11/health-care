@@ -4,6 +4,10 @@ function pexels(id: number, width: number) {
 }
 
 export const images = {
+  servicesBackground: {
+    src: "/services-bg.png",
+    alt: "",
+  },
   homeHero: {
     src: "/home-bg.png",
     alt: "A home care aide walking arm in arm with a smiling client",

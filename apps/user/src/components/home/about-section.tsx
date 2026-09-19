@@ -5,7 +5,7 @@ export function AboutSection() {
   const { video } = aboutSection
 
   return (
-    <Section id={aboutSection.id} className="bg-primary text-primary-foreground">
+    <Section id={aboutSection.id} className="scroll-mt-20 bg-primary text-primary-foreground">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="space-y-5">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">

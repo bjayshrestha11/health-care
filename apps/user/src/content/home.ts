@@ -8,27 +8,6 @@ export const hero = {
   image: images.homeHero,
 } as const
 
-export const featureHighlights = [
-  {
-    icon: "Clock",
-    title: "When You Need Us",
-    body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on Altimax Home Care.",
-    cta: { label: "Learn More", href: "/services" },
-  },
-  {
-    icon: "HeartHandshake",
-    title: "Medicaid Pays 100%",
-    body: "Medicaid and Medicaid HMOs pay 100% when people qualify for in-home help. Let's see if you qualify.",
-    cta: { label: "Contact Us", href: "/contact" },
-  },
-  {
-    icon: "Users",
-    title: "We'll Hire Your Family",
-    body: "Through our Family to Family Program, Medicaid recipients can hire family members or close friends to provide their in-home care, with Medicaid covering the cost.",
-    cta: { label: "Learn More", href: "/services" },
-  },
-] as const
-
 export const aboutSection = {
   id: "about",
   heading: "About Altimax home care",
@@ -42,6 +21,41 @@ export const aboutSection = {
     youtubeId: "jh5U5BnpGN8",
     title: "About Altimax Home Care",
   },
+} as const
+
+export const servicesSection = {
+  id: "services",
+  heading: "Services",
+  background: images.servicesBackground,
+  /** Laid out as a 2x2 grid, in reading order. */
+  cards: [
+    {
+      title: "We give all basic services:",
+      points: [
+        "Meal Preparation",
+        "Light housekeeping",
+        "Medication Reminders",
+        "Companionship and grocery shopping.",
+        "Assistance with doctor\u2019s appointment",
+        "Personal care, assistance of daily living and Errands",
+      ],
+    },
+    {
+      title: "We'll Hire Your Family",
+      body: "Through our Family to Family Program, Medicaid recipients can hire family members or close friends to provide their in-home care, with Medicaid covering the cost.",
+      cta: { label: "Learn More", to: "/services" },
+    },
+    {
+      title: "Medicaid Pays 100%",
+      body: "Medicaid and Medicaid HMOs pay 100% when people qualify for in-home help. Let's see if you qualify.",
+      cta: { label: "Learn More", to: "/contact" },
+    },
+    {
+      title: "ODP Companion services:",
+      body: "Oriental Care, LLC provides companion care Services to children and young adult under the age of 21 those diagnosed with Intellectual Disability (ID) and/or Autism.",
+      cta: { label: "Learn More", to: "/services" },
+    },
+  ],
 } as const
 
 export const mission = {

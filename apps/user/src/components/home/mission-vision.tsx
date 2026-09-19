@@ -1,31 +1,28 @@
-import { CheckCircle2 } from "lucide-react"
 import { Section } from "@/components/layout/section"
 import { mission, vision } from "@/content/home"
 
 export function MissionVision() {
   return (
-    <Section className="bg-muted/30">
-      <div className="grid gap-10 md:grid-cols-2 md:gap-16">
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            {mission.heading}
-          </h2>
-          <p className="text-muted-foreground">{mission.body}</p>
-          <ul className="space-y-2 pt-2">
-            {mission.points.map((point) => (
-              <li key={point} className="flex items-center gap-2 text-sm font-medium">
-                <CheckCircle2 className="size-4 text-primary" />
-                {point}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            {vision.heading}
-          </h2>
-          <p className="text-muted-foreground">{vision.body}</p>
-        </div>
+    <Section className="bg-primary">
+      <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+        {[mission, vision].map((item) => (
+          <div
+            key={item.heading}
+            className="rounded-2xl bg-card p-8 shadow-lg sm:p-10"
+          >
+            <h2 className="text-lg font-medium">{item.heading}</h2>
+            <p className="mt-5 leading-relaxed text-muted-foreground">
+              {item.body}
+            </p>
+            {"points" in item && (
+              <ul className="mt-5 list-disc space-y-1.5 pl-5 text-muted-foreground marker:text-primary">
+                {item.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
       </div>
     </Section>
   )
