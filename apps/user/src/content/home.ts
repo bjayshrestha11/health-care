@@ -29,13 +29,19 @@ export const featureHighlights = [
   },
 ] as const
 
-export const companyOverview = {
-  heading: "About Altimax Home Care, LLC",
+export const aboutSection = {
+  id: "about",
+  heading: "About Altimax home care",
   paragraphs: [
     "Altimax Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Pennsylvania.",
     "We proudly serve clients from three locations across the state, sending qualified, directly-employed aides into clients' homes to help them live safely and independently.",
+    "We are guided by Respect, Passion, Quality, and Accountability, providing compassionate, reliable, and high-quality care that puts every client\u2019s dignity and well-being first.",
   ],
-  image: images.aboutHero,
+  video: {
+    // https://www.youtube.com/watch?v=jh5U5BnpGN8
+    youtubeId: "jh5U5BnpGN8",
+    title: "About Altimax Home Care",
+  },
 } as const
 
 export const mission = {
