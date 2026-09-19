@@ -68,3 +68,16 @@ export const vision = {
   heading: "Our Vision",
   body: "We strive to be one of the leading providers of a wide range of quality home care and services, recognized for enduring dedication to provide innovative, professional, and compassionate care.",
 } as const
+
+export const employmentSection = {
+  id: "employment",
+  heading: "Employment Information",
+  // TODO: swap the placeholder hrefs for the real timesheet/schedule/brochure
+  // files and the agency's ADP portal URL.
+  links: [
+    { label: "Time sheet", href: "#" },
+    { label: "Download Schedule", href: "#" },
+    { label: "ADP", href: "#" },
+    { label: "Brochure", href: "#" },
+  ],
+} as const
