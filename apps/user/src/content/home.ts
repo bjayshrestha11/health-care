@@ -1,11 +1,10 @@
 import { images } from "@/content/images"
 
 export const hero = {
-  eyebrow: "Home Care Aides Serving Pennsylvania",
+  eyebrow: "Home care aides serving Pennsylvania",
   heading: "Compassionate home care you can count on",
-  body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on APlus United Home Care.",
-  primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Our Services", href: "/services" },
+  body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on Altimax home care.",
+  cta: { label: "Our services", to: "/services" },
   image: images.homeHero,
 } as const
 
@@ -13,7 +12,7 @@ export const featureHighlights = [
   {
     icon: "Clock",
     title: "When You Need Us",
-    body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on APlus United Home Care.",
+    body: "We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on Altimax Home Care.",
     cta: { label: "Learn More", href: "/services" },
   },
   {
@@ -31,9 +30,9 @@ export const featureHighlights = [
 ] as const
 
 export const companyOverview = {
-  heading: "About APlus United Home Care, LLC",
+  heading: "About Altimax Home Care, LLC",
   paragraphs: [
-    "APlus United Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Pennsylvania.",
+    "Altimax Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Pennsylvania.",
     "We proudly serve clients from three locations across the state, sending qualified, directly-employed aides into clients' homes to help them live safely and independently.",
   ],
   image: images.aboutHero,

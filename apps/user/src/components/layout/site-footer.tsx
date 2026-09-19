@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { Separator } from "@health-care/ui/components/separator"
-import { mainNav, siteConfig, socialLinks } from "@/content/site"
+import { footerNav, siteConfig, socialLinks } from "@/content/site"
 
 export function SiteFooter() {
   const year = new Date().getFullYear()
@@ -12,7 +12,7 @@ export function SiteFooter() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-3">
             <p className="text-lg font-semibold">
-              <span className="text-primary">APlus</span> United Home Care
+              <span className="text-primary">Altimax</span> Home Care
             </p>
             <p className="text-sm text-muted-foreground">
               {siteConfig.description}
@@ -22,10 +22,10 @@ export function SiteFooter() {
           <div className="space-y-3">
             <p className="text-sm font-semibold text-foreground">Site Links</p>
             <ul className="space-y-2">
-              {mainNav.map((item) => (
-                <li key={item.href}>
+              {footerNav.map((item) => (
+                <li key={item.to}>
                   <Link
-                    to={item.href}
+                    to={item.to}
                     className="text-sm text-muted-foreground hover:text-foreground"
                   >
                     {item.label}

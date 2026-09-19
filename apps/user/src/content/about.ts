@@ -1,16 +1,16 @@
 import { images } from "@/content/images"
 
 export const aboutHero = {
-  heading: "About APlus United Home Care",
+  heading: "About Altimax Home Care",
   intro:
-    "APlus United Home Care is dedicated to providing the highest quality of care in the Home Care Profession.",
+    "Altimax Home Care is dedicated to providing the highest quality of care in the Home Care Profession.",
   image: images.aboutHero,
 } as const
 
 export const aboutOverview = {
   heading: "Who We Are",
   paragraphs: [
-    "Licensed, bonded, and insured, APlus United Home Care serves Pittsburgh, Harrisburg, Erie, and the surrounding areas as a Pennsylvania state Medicaid waiver provider.",
+    "Licensed, bonded, and insured, Altimax Home Care serves Pittsburgh, Harrisburg, Erie, and the surrounding areas as a Pennsylvania state Medicaid waiver provider.",
     "We work with managed care programs through contracts with UPMC, Amerihealth Caritas, and PA Health & Wellness.",
     "Founded in Pittsburgh in 2014, we've since grown to multiple locations across the state, always led locally by qualified healthcare professionals.",
   ],

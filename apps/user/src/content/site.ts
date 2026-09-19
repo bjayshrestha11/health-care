@@ -1,9 +1,10 @@
 export const siteConfig = {
-  name: "APlus United Home Care",
-  legalName: "APlus United Home Care, LLC",
+  name: "Altimax Home Care",
+  legalName: "Altimax Home Care, LLC",
   tagline: "Home Care Aides Serving Pennsylvania",
   description:
     "Licensed, bonded, and insured home care agency providing homemaker, personal care, and companion services throughout Pennsylvania.",
+  logo: { src: "/logo.png", alt: "Altimax Home Care" },
   phone: "(888) 351-6472",
   phoneHref: "tel:+18883516472",
   fax: "(877) 248-9303",
@@ -11,11 +12,17 @@ export const siteConfig = {
   address: "4411 Stilley Road, Suite 207, Pittsburgh, PA 15227",
 } as const
 
+/**
+ * Nav targets are either a route (`to`) or a section on the home page
+ * (`to: "/"` plus `hash`), so the header can link to sections that do not
+ * have a route of their own.
+ */
 export const mainNav = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Employment", to: "/", hash: "employment" },
+  { label: "Contact", to: "/contact" },
 ] as const
 
 export const socialLinks = [
@@ -23,4 +30,11 @@ export const socialLinks = [
   { label: "Twitter", href: "#" },
   { label: "Google+", href: "#" },
   { label: "Instagram", href: "#" },
+] as const
+
+export const footerNav = [
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Contact Us", to: "/contact" },
 ] as const

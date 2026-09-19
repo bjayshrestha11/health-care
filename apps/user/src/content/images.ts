@@ -5,8 +5,8 @@ function pexels(id: number, width: number) {
 
 export const images = {
   homeHero: {
-    src: pexels(29373893, 1600),
-    alt: "A caregiver sharing a warm moment with an elderly woman at home",
+    src: "/home-bg.png",
+    alt: "A home care aide walking arm in arm with a smiling client",
   },
   aboutHero: {
     src: pexels(18459198, 1600),
