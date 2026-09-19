@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router'
 import type { QueryClient } from '@tanstack/react-query'
 import { SiteHeader } from '@/components/layout/site-header'
+import { MapSection } from '@/components/layout/map-section'
 import { SiteFooter } from '@/components/layout/site-footer'
 
 interface RouterContext {
@@ -38,6 +39,7 @@ function RootLayout() {
         <main className="flex-1">
           <Outlet />
         </main>
+        <MapSection />
         <SiteFooter />
       </div>
       {Devtools && (

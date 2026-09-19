@@ -13,6 +13,18 @@ export const siteConfig = {
 } as const
 
 /**
+ * The share link from the spec (https://maps.app.goo.gl/nHnjDS8m5Qv2BpGZ9)
+ * resolves to the Oriental Care, LLC. listing in Harrisburg. Neither the short
+ * link nor a /maps/place/ URL can be framed, so the embed searches for the
+ * listing by name within the viewport of its resolved coordinates.
+ */
+export const mapEmbed = {
+  title: "Oriental Care, LLC. on Google Maps",
+  src: "https://www.google.com/maps?q=Oriental+Care,+LLC.&ll=40.2770344,-76.8235095&z=17&hl=en&output=embed",
+  link: "https://maps.app.goo.gl/nHnjDS8m5Qv2BpGZ9",
+} as const
+
+/**
  * Nav targets are either a route (`to`) or a section on the home page
  * (`to: "/"` plus `hash`), so the header can link to sections that do not
  * have a route of their own.
