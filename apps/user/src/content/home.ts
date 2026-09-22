@@ -72,10 +72,8 @@ export const vision = {
 export const employmentSection = {
   id: "employment",
   heading: "Employment Information",
-  // TODO: swap the placeholder hrefs for the real timesheet/schedule/brochure
-  // files and the agency's ADP portal URL.
   links: [
-    { label: "Time sheet", href: "#" },
+    { label: "Time sheet", href: "/TIMESHEET.pdf" },
     { label: "Download Schedule", href: "#" },
     { label: "ADP", href: "#" },
     { label: "Brochure", href: "#" },
