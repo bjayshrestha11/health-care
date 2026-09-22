@@ -1,11 +1,22 @@
 import { Link } from "@tanstack/react-router"
 import { Separator } from "@health-care/ui/components/separator"
 import { footerNav, mapEmbed, siteConfig, socialLinks } from "@/content/site"
+import { Mail, MapPin, Phone } from "lucide-react"
+import { FacebookIcon } from "../icons/facebook"
 
-const linkStyles = "underline underline-offset-4 hover:text-foreground"
+const linkStyles = "flex items-center gap-2 underline underline-offset-4 hover:text-foreground"
 
 export function SiteFooter() {
   const year = new Date().getFullYear()
+
+  const getIcon = (iconName: string, props: any) => {
+    switch (iconName) {
+      case "facebook":
+        return <FacebookIcon {...props} />
+      default:
+        return null
+    }
+  }
 
   return (
     <footer className="border-t border-border bg-muted/40">
@@ -33,14 +44,16 @@ export function SiteFooter() {
 
           <div className="space-y-4">
             <p className="font-medium text-foreground">Contact</p>
-            <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted-foreground marker:text-primary">
+            <ul className="list-none space-y-2 pl-5 text-sm text-muted-foreground marker:text-primary">
               <li>
                 <a href={siteConfig.phoneHref} className={linkStyles}>
+                  <Phone className="size-4" />
                   {siteConfig.phone}
                 </a>
               </li>
               <li>
                 <a href={`mailto:${siteConfig.email}`} className={linkStyles}>
+                  <Mail className="size-4" />
                   {siteConfig.email}
                 </a>
               </li>
@@ -51,6 +64,7 @@ export function SiteFooter() {
                   rel="noreferrer"
                   className={linkStyles}
                 >
+                  <MapPin className="size-6" />
                   {siteConfig.address}
                 </a>
               </li>
@@ -59,10 +73,11 @@ export function SiteFooter() {
 
           <div className="space-y-4">
             <p className="font-medium text-foreground">Follow Us</p>
-            <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted-foreground marker:text-primary">
+            <ul className="list-none space-y-1.5 pl-5 text-sm text-muted-foreground marker:text-primary">
               {socialLinks.map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className={linkStyles}>
+                    {getIcon(item.icon, { className: "size-4" })}
                     {item.label}
                   </a>
                 </li>
