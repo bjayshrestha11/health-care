@@ -91,9 +91,6 @@ care you can count on
     - • 4411 Stilley Road, Suite 207, Pittsburgh, PA 15227
 4. Follow Us
     - Facebook
-    - Twitter
-    - Google +
-    - Instagram
 - Horizontal Line
 - © 2026 Altimax Home Care, LLC. All Rights Reserved.
 

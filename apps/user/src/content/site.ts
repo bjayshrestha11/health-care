@@ -10,7 +10,7 @@ export const siteConfig = {
   fax: "(877) 248-9303",
   email: "info@aplusunitedhc.com",
   address: "4411 Stilley Road, Suite 207, Pittsburgh, PA 15227",
-} as const
+} as const;
 
 /**
  * The share link from the spec (https://maps.app.goo.gl/nHnjDS8m5Qv2BpGZ9)
@@ -22,7 +22,7 @@ export const mapEmbed = {
   title: "Oriental Care, LLC. on Google Maps",
   src: "https://www.google.com/maps?q=Oriental+Care,+LLC.&ll=40.2770344,-76.8235095&z=17&hl=en&output=embed",
   link: "https://maps.app.goo.gl/nHnjDS8m5Qv2BpGZ9",
-} as const
+} as const;
 
 /**
  * Nav targets are either a route (`to`) or a section on the home page
@@ -35,18 +35,13 @@ export const mainNav = [
   { label: "Services", to: "/services" },
   { label: "Employment", to: "/", hash: "employment" },
   { label: "Contact", to: "/contact" },
-] as const
+] as const;
 
-export const socialLinks = [
-  { label: "Facebook", href: "#" },
-  { label: "Twitter", href: "#" },
-  { label: "Google+", href: "#" },
-  { label: "Instagram", href: "#" },
-] as const
+export const socialLinks = [{ label: "Facebook", href: "#" }] as const;
 
 export const footerNav = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Contact Us", to: "/contact" },
-] as const
+] as const;
