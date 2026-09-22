@@ -5,11 +5,11 @@ export const siteConfig = {
   description:
     "Licensed, bonded, and insured home care agency providing homemaker, personal care, and companion services throughout Pennsylvania.",
   logo: { src: "/logo.png", alt: "Altimax Home Care" },
-  phone: "(888) 351-6472",
+  phone: "(410) 220-4170",
   phoneHref: "tel:+18883516472",
   fax: "(877) 248-9303",
-  email: "info@aplusunitedhc.com",
-  address: "4411 Stilley Road, Suite 207, Pittsburgh, PA 15227",
+  email: "altimaxhomecare@gmail.com",
+  address: "2141 Huntingdon Ave, Baltimore, MD 21211",
 } as const;
 
 /**
