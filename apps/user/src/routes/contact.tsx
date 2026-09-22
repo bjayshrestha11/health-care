@@ -12,9 +12,7 @@ function ContactPage() {
     <>
       <ContactHero />
       <Section>
-        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          <ContactForm />
-        </div>
+        <ContactForm />
       </Section>
     </>
   );
