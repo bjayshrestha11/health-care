@@ -74,8 +74,8 @@ export const employmentSection = {
   heading: "Employment Information",
   links: [
     { label: "Time sheet", href: "/TIMESHEET.pdf" },
-    { label: "Download Schedule", href: "#" },
-    { label: "ADP", href: "#" },
-    { label: "Brochure", href: "#" },
+    { label: "Download Schedule", href: "/TIMESHEET-SCHEDULE.pdf" },
+    { label: "ADP", href: "https://www.adp.com/logins/adp-workforce-now.aspx" },
+    { label: "Brochure", href: "/BROCHURE.pdf" },
   ],
 } as const
