@@ -2,7 +2,7 @@ import { images } from "@/content/images";
 
 export const servicesIntro = {
   heading: "Our Services",
-  body: "We send aides to the homes of clients throughout 23 counties of Pennsylvania, offering homemaking, personal care, and companionship, with options ranging from a few hours a week to full 24-hour and live-in care.",
+  body: "We send aides to the homes of clients throughout 8 counties of Maryland, offering homemaking, personal care, and companionship, with options ranging from a few hours a week to full 24-hour and live-in care.",
 } as const;
 
 export const serviceCategories = [

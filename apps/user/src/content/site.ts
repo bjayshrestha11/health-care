@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Altimax Home Care",
   legalName: "Altimax Home Care",
-  tagline: "Home Care Aides Serving Pennsylvania",
+  tagline: "Home Care Aides Serving Maryland",
   description:
-    "Licensed, bonded, and insured home care agency providing homemaker, personal care, and companion services throughout Pennsylvania.",
+    "Licensed, bonded, and insured home care agency providing homemaker, personal care, and companion services throughout Maryland.",
   logo: { src: "/logo.png", alt: "Altimax Home Care" },
   phone: "(410) 220-4170",
   phoneHref: "tel:+4102204170",

@@ -3,16 +3,14 @@ import { images } from "@/content/images";
 export const aboutHero = {
   heading: "About Altimax Home Care",
   intro:
-    "Altimax Home Care is dedicated to providing the highest quality of care in the Home Care Profession.",
+    "Altimax Home Care is dedicated to providing the highest quality of care in the Home by the Professionals.",
   image: images.aboutHero,
 } as const;
 
 export const aboutOverview = {
   heading: "Who We Are",
   paragraphs: [
-    "Licensed, bonded, and insured, Altimax Home Care serves Pittsburgh, Harrisburg, Erie, and the surrounding areas as a Pennsylvania state Medicaid waiver provider.",
-    "We work with managed care programs through contracts with UPMC, Amerihealth Caritas, and PA Health & Wellness.",
-    "Founded in Pittsburgh in 2014, we've since grown to multiple locations across the state, always led locally by qualified healthcare professionals.",
+    "Licensed, bonded, and insured, Altimax Home Care serves Maryland  and the surrounding areas as a Baltimore state Medicaid waiver provider",
   ],
 } as const;
 
@@ -46,7 +44,7 @@ export const aideQualifications = {
 
 export const serviceArea = {
   heading: "Where We Work",
-  body: "We send aides to the homes of clients throughout 23 counties of Pennsylvania, including Allegheny, Erie, Dauphin, and York counties.",
+  body: "We send aides to the homes of clients throughout 23 counties of Maryland, including Allegheny, Erie, Dauphin, and York counties.",
 } as const;
 
 export const payors = {

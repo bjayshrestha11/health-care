@@ -13,7 +13,7 @@
 ## Home
 
 - Background Image ![home-bg.png](https://cdn.altimaxmd.com/home-bg.png)
-- HOME CARE AIDES SERVING PENNSYLVANIA
+- HOME CARE AIDES SERVING Maryland
 - Compassionate home
   care you can count on
 - We work days, nights, weekends, and holidays. Whether you need at-home help a few hours per week, 24 hours per day, or on a live-in basis, you can count on Altimax home care
@@ -25,7 +25,7 @@
 - In row
   - In Column
     - About Altimax home care
-    - Altimax Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Pennsylvania.
+    - Altimax Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Maryland.
     - We proudly serve clients from three locations across the state, sending qualified, directly-employed aides into clients' homes to help them live safely and independently.
     - We are guided by Respect, Passion, Quality, and Accountability, providing compassionate, reliable, and high-quality care that puts every client’s dignity and well-being first.
   - Video (https://www.youtube.com/watch?v=jh5U5BnpGN8)
@@ -85,7 +85,7 @@
 ## Footer
 
 1. Altimax Home Care
-   - Licensed, bonded, and insured home care agency providing homemaker, personal care, and companion services throughout Pennsylvania.
+   - Licensed, bonded, and insured home care agency providing homemaker, personal care, and companion services throughout Maryland.
 2. Links
    - Home
    - About Us
