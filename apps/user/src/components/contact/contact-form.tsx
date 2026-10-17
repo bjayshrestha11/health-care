@@ -11,8 +11,30 @@ import { useState, type FormEvent } from "react";
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
+  /**
+   * There is no backend, so the form hands the message off to the visitor's
+   * own mail client with everything prefilled. They still have to press send.
+   */
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+    const value = (name: string) => String(data.get(name) ?? "").trim();
+    const name = `${value("firstName")} ${value("lastName")}`.trim();
+
+    const subject = `Home care inquiry from ${name}`;
+    const body = [
+      `Name: ${name}`,
+      `Email: ${value("email")}`,
+      `Phone: ${value("phone")}`,
+      "",
+      value("message"),
+    ].join("\n");
+
+    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
     setSubmitted(true);
   }
 
@@ -84,10 +106,29 @@ export function ContactForm() {
                 className="size-11 text-primary"
                 aria-hidden="true"
               />
-              <p className="mt-4 text-xl font-semibold">Message received</p>
+              <p className="mt-4 text-xl font-semibold">
+                Your message is ready to send
+              </p>
               <p className="mt-2 max-w-sm text-sm leading-6 text-muted-foreground">
-                Thanks for reaching out. A member of our team will be in touch
-                soon.
+                We&apos;ve opened your email app with the details filled in.
+                Press send there and a member of our team will be in touch soon.
+              </p>
+              <p className="mt-4 max-w-sm text-sm leading-6 text-muted-foreground">
+                Nothing opened? Email us directly at{" "}
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="font-medium text-primary underline underline-offset-4"
+                >
+                  {siteConfig.email}
+                </a>{" "}
+                or call{" "}
+                <a
+                  href={siteConfig.phoneHref}
+                  className="font-medium text-primary underline underline-offset-4"
+                >
+                  {siteConfig.phone}
+                </a>
+                .
               </p>
               <Button
                 type="button"
@@ -95,7 +136,7 @@ export function ContactForm() {
                 className="mt-6"
                 onClick={() => setSubmitted(false)}
               >
-                Send another message
+                Write another message
               </Button>
             </div>
           ) : (
