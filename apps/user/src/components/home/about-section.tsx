@@ -19,14 +19,20 @@ export function AboutSection() {
         </div>
 
         <div className="overflow-hidden rounded-xl bg-black/20 shadow-xl ring-1 ring-white/15">
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+          {/* The clip has a voice-over, so it never autoplays, and only its
+              metadata loads until someone presses play. */}
+          <video
+            controls
+            preload="metadata"
+            playsInline
             title={video.title}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="aspect-video w-full"
-          />
+            className="aspect-video w-full bg-black"
+          >
+            <source src={video.src} type={video.type} />
+            <a href={video.src} className="underline">
+              Download the video
+            </a>
+          </video>
         </div>
       </div>
     </Section>

@@ -28,7 +28,7 @@
     - Altimax Home Care is dedicated to providing care with compassion, excellence, and reliability to families across Maryland.
     - We proudly serve clients from three locations across the state, sending qualified, directly-employed aides into clients' homes to help them live safely and independently.
     - We are guided by Respect, Passion, Quality, and Accountability, providing compassionate, reliable, and high-quality care that puts every client’s dignity and well-being first.
-  - Video (https://www.youtube.com/watch?v=jh5U5BnpGN8)
+  - Video (https://cdn.altimaxmd.com/altimax_home_care_with_voice.mp4)
 
 ## Services
 

@@ -17,8 +17,8 @@ export const aboutSection = {
     "We are guided by Respect, Passion, Quality, and Accountability, providing compassionate, reliable, and high-quality care that puts every client\u2019s dignity and well-being first.",
   ],
   video: {
-    // https://www.youtube.com/watch?v=jh5U5BnpGN8
-    youtubeId: "jh5U5BnpGN8",
+    src: "https://cdn.altimaxmd.com/altimax_home_care_with_voice.mp4",
+    type: "video/mp4",
     title: "About Altimax Home Care",
   },
 } as const;
